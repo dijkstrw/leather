@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pattern>
+    <!--Pattern created with Valentina (http://www.valentina-project.org/).-->
+    <version>0.3.9</version>
+    <unit>cm</unit>
+    <author/>
+    <description/>
+    <notes/>
+    <measurements/>
+    <increments>
+        <increment formula="8" description="" name="#Fourpenwidth"/>
+        <increment formula="14.8" description="" name="#PenLength"/>
+        <increment formula="7" description="" name="#FlapSpace"/>
+        <increment formula="1" description="" name="#Flapwidth"/>
+        <increment formula="0.9*#Fourpenwidth" description="" name="#FlapTaper"/>
+    </increments>
+    <draw name="FoutainPenHolder">
+        <calculation>
+            <point id="1" mx="0.132292" x="0.79375" y="1.05833" name="A" type="single" my="0.264583"/>
+            <point id="2" basePoint="1" typeLine="hair" mx="0.132292" length="#Fourpenwidth" name="A1" lineColor="black" type="endLine" angle="0" my="0.264583"/>
+            <point id="3" basePoint="2" typeLine="hair" mx="0.132292" length="#PenLength" name="A2" lineColor="black" type="endLine" angle="270" my="0.264583"/>
+            <point id="4" basePoint="3" typeLine="hair" mx="0.132292" length="#Fourpenwidth" name="A3" lineColor="black" type="endLine" angle="180" my="0.264583"/>
+            <line id="5" firstPoint="4" typeLine="hair" secondPoint="1" lineColor="black"/>
+            <point id="6" firstPoint="1" typeLine="none" mx="-4.8143" secondPoint="4" length="#FlapSpace" name="A4" lineColor="black" type="alongLine" my="-1.57453"/>
+            <point id="7" firstPoint="6" typeLine="none" mx="-4.44964" secondPoint="4" length="#Flapwidth" name="A5" lineColor="black" type="alongLine" my="0.07433"/>
+            <point id="8" firstPoint="2" typeLine="none" mx="2.73242" secondPoint="3" length="#FlapSpace" name="A6" lineColor="black" type="alongLine" my="-1.66966"/>
+            <point id="9" firstPoint="8" typeLine="none" mx="2.8434" secondPoint="3" length="#Flapwidth" name="A7" lineColor="black" type="alongLine" my="1.2"/>
+            <line id="10" firstPoint="6" typeLine="hair" secondPoint="8" lineColor="black"/>
+            <line id="11" firstPoint="7" typeLine="hair" secondPoint="9" lineColor="black"/>
+            <operation id="12" suffix="a1" p2Line="2" p1Line="1" type="flippingByLine">
+                <source>
+                    <item idObject="7"/>
+                    <item idObject="9"/>
+                </source>
+                <destination>
+                    <item idObject="13" mx="-4.44964" my="0.07433"/>
+                    <item idObject="14" mx="2.8434" my="1.2"/>
+                </destination>
+            </operation>
+            <point id="15" firstPoint="13" typeLine="none" mx="0.132292" secondPoint="14" length="#FlapTaper" name="A8" lineColor="black" type="alongLine" my="0.264583"/>
+            <point id="16" firstPoint="14" typeLine="none" mx="0.132292" secondPoint="13" length="#FlapTaper" name="A9" lineColor="black" type="alongLine" my="0.264583"/>
+            <spline id="17" angle2="90" length2="#FlapSpace" angle1="90" length1="#FlapSpace" point4="15" type="simpleInteractive" point1="16" color="black"/>
+            <spline id="18" angle2="-90" length2="#FlapSpace/2" angle1="90" length1="#FlapSpace/2" point4="16" type="simpleInteractive" point1="1" color="black"/>
+            <spline id="19" angle2="90" length2="#FlapSpace/2" angle1="-90" length1="#FlapSpace/2" point4="2" type="simpleInteractive" point1="15" color="black"/>
+        </calculation>
+        <modeling>
+            <point id="20" idObject="1" inUse="true" mx="0.132292" type="modeling" my="0.264583"/>
+            <spline id="21" idObject="18" inUse="true" type="modelingSpline"/>
+            <point id="22" idObject="16" inUse="true" mx="0.132292" type="modeling" my="0.264583"/>
+            <spline id="23" idObject="17" inUse="true" type="modelingSpline"/>
+            <point id="24" idObject="15" inUse="true" mx="0.132292" type="modeling" my="0.264583"/>
+            <spline id="25" idObject="19" inUse="true" type="modelingSpline"/>
+            <point id="26" idObject="2" inUse="true" mx="0.132292" type="modeling" my="0.264583"/>
+            <point id="27" idObject="3" inUse="true" mx="0.132292" type="modeling" my="0.264583"/>
+            <point id="28" idObject="4" inUse="true" mx="0.132292" type="modeling" my="0.264583"/>
+            <point id="30" idObject="6" inUse="true" mx="-4.8143" type="modeling" my="-1.57453"/>
+            <point id="31" idObject="8" inUse="true" mx="2.73242" type="modeling" my="-1.66966"/>
+            <point id="32" idObject="9" inUse="true" mx="2.8434" type="modeling" my="1.2"/>
+            <point id="33" idObject="7" inUse="true" mx="-4.44964" type="modeling" my="0.07433"/>
+            <point id="35" idObject="1" inUse="true" mx="0.132292" type="modeling" my="0.264583"/>
+            <point id="36" idObject="2" inUse="true" mx="0.132292" type="modeling" my="0.264583"/>
+            <point id="37" idObject="3" inUse="true" mx="0.132292" type="modeling" my="0.264583"/>
+            <point id="38" idObject="4" inUse="true" mx="0.132292" type="modeling" my="0.264583"/>
+        </modeling>
+        <details>
+            <detail id="29" width="0.01" forbidFlipping="0" mx="0" supplement="0" closed="1" name="Bottom" my="0">
+                <data letter="B" width="0" mx="0" height="0" fontSize="0" visible="true" rotation="0" my="0">
+                    <mcp placement="0" material="0" cutNumber="1"/>
+                </data>
+                <patternInfo width="0" mx="0" height="0" fontSize="0" visible="true" rotation="0" my="0"/>
+                <grainline arrows="0" mx="136.145" length="2" visible="true" rotation="0" my="57.0928"/>
+                <node idObject="20" mx="0" nodeType="Contour" type="NodePoint" my="0"/>
+                <node idObject="21" reverse="0" mx="0" nodeType="Contour" type="NodeSpline" my="0"/>
+                <node idObject="22" mx="0" nodeType="Contour" type="NodePoint" my="0"/>
+                <node idObject="23" reverse="0" mx="0" nodeType="Contour" type="NodeSpline" my="0"/>
+                <node idObject="24" mx="0" nodeType="Contour" type="NodePoint" my="0"/>
+                <node idObject="25" reverse="0" mx="0" nodeType="Contour" type="NodeSpline" my="0"/>
+                <node idObject="26" mx="0" nodeType="Contour" type="NodePoint" my="0"/>
+                <node idObject="27" mx="0" nodeType="Contour" type="NodePoint" my="0"/>
+                <node idObject="28" mx="0" nodeType="Contour" type="NodePoint" my="0"/>
+            </detail>
+            <detail id="34" width="0.2" forbidFlipping="0" mx="-13.4408" supplement="0" closed="1" name="Flap" my="-6.48229">
+                <data letter="F" width="0" mx="0" height="0" fontSize="0" visible="true" rotation="0" my="0">
+                    <mcp placement="0" material="0" cutNumber="1"/>
+                </data>
+                <patternInfo width="0" mx="0" height="0" fontSize="0" visible="true" rotation="0" my="0"/>
+                <grainline arrows="0" mx="83.3612" length="2" visible="true" rotation="0" my="320.225"/>
+                <node idObject="30" mx="0" nodeType="Contour" type="NodePoint" my="0"/>
+                <node idObject="31" mx="0" nodeType="Contour" type="NodePoint" my="0"/>
+                <node idObject="32" mx="0" nodeType="Contour" type="NodePoint" my="0"/>
+                <node idObject="33" mx="0" nodeType="Contour" type="NodePoint" my="0"/>
+            </detail>
+            <detail id="39" width="0.01" forbidFlipping="0" mx="11.9063" supplement="0" closed="1" name="Top" my="-1.27">
+                <data letter="T" width="0" mx="0" height="0" fontSize="0" visible="true" rotation="0" my="0">
+                    <mcp placement="0" material="0" cutNumber="1"/>
+                </data>
+                <patternInfo width="0" mx="0" height="0" fontSize="0" visible="true" rotation="0" my="0"/>
+                <grainline arrows="0" mx="46.7356" length="2" visible="true" rotation="0" my="105.21"/>
+                <node idObject="35" mx="0" nodeType="Contour" type="NodePoint" my="0"/>
+                <node idObject="36" mx="0" nodeType="Contour" type="NodePoint" my="0"/>
+                <node idObject="37" mx="0" nodeType="Contour" type="NodePoint" my="0"/>
+                <node idObject="38" mx="0" nodeType="Contour" type="NodePoint" my="0"/>
+            </detail>
+        </details>
+        <groups/>
+    </draw>
+</pattern>
